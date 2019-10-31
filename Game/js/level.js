@@ -8,6 +8,20 @@
 var levelState = {
    create: function() {
       // create the level
+      game.physics.startSystem(phaser.physics.ARCADE);
+      game.add.sprite(0, 0, 'background');
+      platfroms = game.add.group();
+      platforms.enableBody = true;
+      var ground = platforms.create(0, game.world.heght - 64, 'ground');
+        ground.scale.setTo(2, 2);
+        ground.body.immovable = true;
+
+      player = game.add.sprite(32, game.world.height - 150, 'reginald')
+        game.physics.arcade.enable(player);
+        player.body.bounce.y = 0.2;
+        player.body.gravity.y = 300;
+        player.body.collideWorldBounds = true;
+
    },
 
    update: function() {
