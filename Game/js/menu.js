@@ -8,7 +8,7 @@ var menuState = {
      title.anchor.setTo(0.5, 0.5);
 
      help = game.add.text(80, game.world.centerY+50, '', {font: '25px Arial', fill: '#ffffff'});
-     helpText = 'Use the mouse to aim the defense turrets and \n';
+     helpText = 'Use WASD to move \n';
      helpText += 'protect the cities from the meteors';
      help.text = helpText;
       // create the scene
