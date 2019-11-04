@@ -4,7 +4,6 @@ game.state.add('boot', bootState);
 game.state.add('load', loadState);
 game.state.add('menu', menuState);
 game.state.add('level', levelState);
-// remember to add in additional levels as they are made
 game.state.add('gameover', gameoverState);
 
 game.global = {
