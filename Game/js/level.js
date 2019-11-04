@@ -6,11 +6,13 @@
  * level2State etc will work fine
  */
 var levelState = {
+
    create: function() {
-      // create the level
-      game.physics.startSystem(phaser.physics.ARCADE);
+
+      game.physics.startSystem(Phaser.Physics.ARCADE);
+      game.world.setBounds(0,0,4000,1000);
       game.add.sprite(0, 0, 'background');
-      platfroms = game.add.group();
+      platforms = game.add.group();
       platforms.enableBody = true;
       var ground = platforms.create(0, game.world.heght - 64, 'ground');
         ground.scale.setTo(2, 2);
@@ -22,10 +24,17 @@ var levelState = {
         player.body.gravity.y = 300;
         player.body.collideWorldBounds = true;
 
+      cursors = game.input.keyboard.createCursorKeys();
+      game.camera.follow(player);
+
    },
 
    update: function() {
-      // do things on the game loop
+      player.body.velocity.x = 0;
+      if (cursors.left.isDowb){
+        player.body.velocity.x = -150;
+        player.animations.play
+      }
    },
 
    // this is how you write a function

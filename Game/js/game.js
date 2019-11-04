@@ -9,6 +9,8 @@ game.state.add('gameover', gameoverState);
 
 game.global = {
 
+
+
    // set variables that travel between the states here
    // eg score = 0;
    // access using game.global
