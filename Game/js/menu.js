@@ -4,8 +4,8 @@
  */
 var menuState = {
    create: function() {
-     title = this.add.text(100, 200, 'Phaser', { fontFamily: 'Arial', fontSize: 64, color: '#00ff00' });
-     title.anchor.setTo(0.5, 0.5);
+     title = game.add.sprite(400, 300, 'title')
+
       // create the scene
    },
 
