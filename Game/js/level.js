@@ -31,9 +31,11 @@ var levelState = {
 
    update: function() {
       player.body.velocity.x = 0;
-      if (cursors.left.isDowb){
+      if (cursors.left.isDown){
         player.body.velocity.x = -150;
-        player.animations.play
+      }
+      if (cursors.right.isDown){
+        player.body.velocity.x = 150;
       }
    },
 
