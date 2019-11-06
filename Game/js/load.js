@@ -14,6 +14,7 @@ var loadState = {
       });
 
       // load all assets
+      game.load.image('background', "assets/background.png");
    },
 
    create: function() {
