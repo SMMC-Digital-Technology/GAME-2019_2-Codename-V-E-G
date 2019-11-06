@@ -1,5 +1,7 @@
 var game = new Phaser.Game(window.innerWidth, window.innerHeight, Phaser.CANVAS, 'game-world');
 
+var title
+
 game.state.add('boot', bootState);
 game.state.add('load', loadState);
 game.state.add('menu', menuState);
