@@ -4,13 +4,8 @@
  */
 var menuState = {
    create: function() {
-     title = game.add.text(game.world.centerX, game.world.centerY-100, 'Codename-V-E-G',  {fontFamily: 'Arial', fontSize: 64, color: '#00ff00' });
+     title = this.add.text(100, 200, 'Phaser', { fontFamily: 'Arial', fontSize: 64, color: '#00ff00' });
      title.anchor.setTo(0.5, 0.5);
-
-     help = game.add.text(80, game.world.centerY+50, 'text', {fontFamily: 'Arial', fontSize: 64, color: '#00ff00' });
-     helpText = 'Use WASD to move \n';
-     helpText += 'protect the cities from the meteors';
-     help.text = helpText;
       // create the scene
    },
 
