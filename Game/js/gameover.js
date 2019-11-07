@@ -7,5 +7,5 @@ var gameoverState = {
    }
 
    //use the following to go back to the menu
-   //game.state.start('menu');
+    game.state.start('menu');
 };
