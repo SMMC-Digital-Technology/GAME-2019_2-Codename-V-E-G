@@ -7,11 +7,17 @@
  */
 var levelState = {
 
+  render: function() {
+     game.debug.body(player);
+  },
+
    create: function() {
 
       game.physics.startSystem(Phaser.Physics.ARCADE);
       game.world.setBounds(0,0,4000,1000);
-      game.add.sprite(0, 0, 'background');
+      background  = game.add.sprite(0, 0, 'background');
+      background.height = game.world.height;
+      background.width = game.world.width;
       platforms = game.add.group();
       platforms.enableBody = true;
       var ground = platforms.create(0, game.world.heght - 64, 'ground');
@@ -20,7 +26,7 @@ var levelState = {
 
       player = game.add.sprite(32, game.world.height - 150, 'reginald')
         game.physics.arcade.enable(player);
-        player.body.bounce.y = 0.2;
+        //player.body.bounce.y = 0.2;
         player.body.gravity.y = 300;
         player.body.collideWorldBounds = true;
 
