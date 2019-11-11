@@ -20,11 +20,10 @@ var levelState = {
       background.width = game.world.width;
       platforms = game.add.group();
       platforms.enableBody = true;
-      var ground = platforms.create(0, game.world.heght - 64, 'ground');
-        ground.scale.setTo(2, 2);
+      var ground = platforms.create(0, (6300 - 500) / 6300 * game.world.height, 'ground');
         ground.body.immovable = true;
 
-      player = game.add.sprite(32, game.world.height - 150, 'reginald')
+      player = game.add.sprite(32, game.world.height - 150, 'reginald');
         game.physics.arcade.enable(player);
         //player.body.bounce.y = 0.2;
         player.body.gravity.y = 300;
@@ -36,13 +35,18 @@ var levelState = {
    },
 
    update: function() {
+
+      var hitPlatform = game.physics.arcade.collide(player, platforms);
+
       player.body.velocity.x = 0;
+
       if (cursors.left.isDown){
         player.body.velocity.x = -150;
-      }
+      };
+      
       if (cursors.right.isDown){
         player.body.velocity.x = 150;
-      }
+      };
    },
 
    // this is how you write a function

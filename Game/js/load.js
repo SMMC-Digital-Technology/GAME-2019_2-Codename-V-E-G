@@ -14,7 +14,7 @@ var loadState = {
       game.load.image('help', 'assets/help.png');
       game.load.image('button', 'assets/button.png');
       //game.load,image('backgroundmenu', 'assets/background2.png')
-      game.load.image('ground', 'assets/dude.png')
+      game.load.image('ground', 'assets/platform.png')
    },
 
    create: function() {
