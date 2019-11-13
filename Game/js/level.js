@@ -49,7 +49,7 @@ var levelState = {
       };
    },
    create: function
-      game.state.start('gameover'); 
+      game.state.start('gameover');
 
    // this is how you write a function
    // note the comma after the } above

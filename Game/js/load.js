@@ -18,7 +18,7 @@ var loadState = {
    },
 
    create: function() {
-      game.state.start('level');
+      game.state.start('menu');
    }
 
 };
