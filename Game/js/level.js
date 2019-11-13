@@ -43,18 +43,20 @@ var levelState = {
       if (cursors.left.isDown){
         player.body.velocity.x = -150;
       };
-      
+
       if (cursors.right.isDown){
         player.body.velocity.x = 150;
       };
    },
+   create: function
+      game.state.start('gameover'); 
 
    // this is how you write a function
    // note the comma after the } above
    // see that variables go in the brackets still
    // to use this function in collision detection, write this.exampleFunction
    // to call it manually, write this.exampleFunction(1, 2)
-   exampleFunction: function(something, somethingElse) {
+   //exampleFunction: function(something, somethingElse) {
 
    }
 
