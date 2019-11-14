@@ -22,12 +22,13 @@ var levelState = {
       platforms.enableBody = true;
       var ground = platforms.create(0, (6300 - 500) / 6300 * game.world.height, 'ground');
         ground.body.immovable = true;
-        ground.scale.setTo(2, 2);
+        ground.scale.setTo(400, 2);
+        ground.alpha = 0;
 
       player = game.add.sprite(32, game.world.height - 150, 'reginald');
         game.physics.arcade.enable(player);
         //player.body.bounce.y = 0.2;
-        player.body.gravity.y = 300;
+        player.body.gravity.y = 1000;
         player.body.collideWorldBounds = true;
 
       cursors = game.input.keyboard.createCursorKeys();
@@ -48,17 +49,10 @@ var levelState = {
       if (cursors.right.isDown){
         player.body.velocity.x = 150;
       };
-   },
-   create: function
-      game.state.start('gameover');
 
-   // this is how you write a function
-   // note the comma after the } above
-   // see that variables go in the brackets still
-   // to use this function in collision detection, write this.exampleFunction
-   // to call it manually, write this.exampleFunction(1, 2)
-   //exampleFunction: function(something, somethingElse) {
-
+      if (cursors.up.isDown && player.body.touching.down && hitPlatform){
+        player.body.velocity.y = -700
+      }
    }
 
 };
