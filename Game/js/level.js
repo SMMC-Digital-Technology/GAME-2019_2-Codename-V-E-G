@@ -22,6 +22,7 @@ var levelState = {
       platforms.enableBody = true;
       var ground = platforms.create(0, (6300 - 500) / 6300 * game.world.height, 'ground');
         ground.body.immovable = true;
+        ground.scale.setTo(2, 2);
 
       player = game.add.sprite(32, game.world.height - 150, 'reginald');
         game.physics.arcade.enable(player);
