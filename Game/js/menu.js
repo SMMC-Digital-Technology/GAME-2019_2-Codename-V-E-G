@@ -5,9 +5,12 @@
 var menuState = {
    create: function() {
      game.stage.backgroundColor = '#fff';
-     title = game.add.sprite(400, 300, 'title')
+     title = game.add.sprite(400, 300, 'title');
+  MyFuntion: function() {
+     button = game.add.button(game.world.centerX, game.world.centerY, 'button');
+     button.onInputUp.add(MyFunction);
 
-      // create the scene
+    // create the scene
    },
 
    // this is how you write a function
