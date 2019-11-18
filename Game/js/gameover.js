@@ -4,8 +4,11 @@
 var gameoverState = {
    create: function() {
       // create the screen
-   }
 
-   //use the following to go back to the menu
-    game.state.start('menu');
+      //add button
+   },
+
+   buttonClick: function() {
+     game.state.start('menu');
+   }
 };

@@ -4,6 +4,7 @@
  */
 var menuState = {
    create: function() {
+     game.stage.backgroundColor = '#fff';
      title = game.add.sprite(400, 300, 'title')
 
       // create the scene
