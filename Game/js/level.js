@@ -32,7 +32,6 @@ var levelState = {
         player.body.collideWorldBounds = true;
         player.animations.add('right', [1, 2, 3, 4, 3, 2], 10, true);
         player.animations.add('left', [5, 6, 7, 8, 7, 6], 10, true);
-        //player.animations.add('stop', [0, 0], 10, true);
 
       cursors = game.input.keyboard.createCursorKeys();
       game.camera.follow(player);
