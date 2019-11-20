@@ -39,10 +39,10 @@ var levelState = {
 //this is the enemy
       meatloaf = game.add.sprite(3700, game.world.hieght - 150, 'meatloaf');
         game.physics.arcade.enable(meatloaf);
-        player.body.gravity.y = 1000;
-        player.collideWorldBounds = true;
-        player.animations.add('right', [1, 2, 3, 4] 10, true);
-        player.animations.add('left', [5, 6, 7, 8] 10, true);
+        meatloaf.body.gravity.y = 1000;
+        meatloaf.collideWorldBounds = true;
+        meatloaf.animations.add('right', [1, 2, 3, 4] 10, true);
+        meatloaf.animations.add('left', [5, 6, 7, 8] 10, true);
 
       cursors = game.input.keyboard.createCursorKeys();
 
@@ -75,6 +75,21 @@ var levelState = {
       if (cursors.up.isDown && player.body.touching.down && hitPlatform){
         player.body.velocity.y = -700;
       }
+     baddie.body.velocity.y = 0;
+     baddie.body.velocity.x = 0;
+
+     if (player.x < baddie.x) {
+      baddie.animations.play("left");
+      if (baddie.x - player.x < 100 && baddie.x > 400) {
+        baddie.body.velocity.x = -100;
+      }
+    }
+      else {
+        baddie.animations.play("right");
+      if (player.x - baddie.x < 100 && baddie.x < game.world.width) {
+         baddie.body.velocity.x = 100;
+      }
    }
+ }
 
 };
