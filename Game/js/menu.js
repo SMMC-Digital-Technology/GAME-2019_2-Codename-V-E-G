@@ -6,9 +6,15 @@ var menuState = {
    create: function() {
      game.stage.backgroundColor = '#fff';
      title = game.add.sprite(400, 300, 'title');
-  MyFuntion: function() {
+
      button = game.add.button(game.world.centerX, game.world.centerY, 'button');
-     button.onInputUp.add(MyFunction);
+   button.anchor.setTo(0.5,0.5);
+   button.onInputUp.add(this.start);
+
+     //button = game.add.button(game.world.centerX, game.world.centerY, 'button');
+    // button.onInputUp.add(myFunction)
+      // game.state.start('load')
+
 
     // create the scene
    },
