@@ -10,15 +10,17 @@ var loadState = {
 
       // load all assets
       game.load.image('background', 'assets/background.png');
-      game.load.image('title', 'assets/VEG_TITLE.png');
+      game.load.image('title', 'assets/VEG TITLE.png');
+      //game.load.image('help', 'assets/help.png');
       game.load.image('button', 'assets/button.png');
       //game.load,image('backgroundmenu', 'assets/background2.png')
       game.load.spritesheet('reginald', 'assets/REGINALD BOI.png', 64, 64);
       game.load.image('ground', 'assets/platform.png');
+      game.load.spritesheet('meatloaf', 'assets/OH MY.png');
    },
 
    create: function() {
-      game.state.start('menu');
+      game.state.start('level');
    }
 
 };
