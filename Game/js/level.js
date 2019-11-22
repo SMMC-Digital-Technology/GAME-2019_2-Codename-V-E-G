@@ -77,19 +77,19 @@ var levelState = {
       }
 
 //Baddie movement
-     baddie.body.velocity.y = 0;
-     baddie.body.velocity.x = 0;
+     meatloaf.body.velocity.y = 0;
+     meatloaf .body.velocity.x = 0;
 
-     if (player.x < baddie.x) {
-      baddie.animations.play("left");
-      if (baddie.x - player.x < 100 && baddie.x > 400) {
-        baddie.body.velocity.x = -300;
+     if (player.x < meatloaf.x) {
+      meatloaf.animations.play("left");
+      if (meatloaf.x - player.x < 100 && meatloaf.x > 400) {
+        meatloaf.body.velocity.x = -300;
       }
     }
       else {
-        baddie.animations.play("right");
-      if (player.x - baddie.x < 100 && baddie.x < game.world.width) {
-         baddie.body.velocity.x = 100;
+        meatloaf.animations.play("right");
+      if (player.x - baddie.x < 100 && meatloaf.x < game.world.width) {
+         meatloaf.body.velocity.x = 100;
       }
    }
  }
