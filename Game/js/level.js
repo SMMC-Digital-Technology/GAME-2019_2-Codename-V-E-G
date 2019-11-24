@@ -21,40 +21,142 @@ var levelState = {
       background.width = game.world.width;
       platforms = game.add.group();
       platforms.enableBody = true;
-      var ground = platforms.create(0, (6300 - 500) / 6300 * game.world.height, 'ground');
+      platforms.immovable = true;
+
+      var ground = platforms.create(3200, (6300 - 500) / 6300 * game.world.height, 'ground');
         ground.body.immovable = true;
-        ground.scale.setTo(400, 2);
+        ground.scale.setTo(400, 1);
         ground.alpha = 0;
+
+      end = game.add.group();
+      end.enableBody = true;
+      end1 = end.create(3900, 0, 'end1');
+        end1.body.immovable = true;
+        end1.scale.setTo(1, 1000);
+        end1.alpha = 0;
+      end2 = end.create(100, 0, 'end2');
+        end2.body.immovable = true;
+        end2.scale.setTo(1, 1000);
+        end2.alpha = 0;
+
+      var desks = platforms.create(3220, game.world.height - 150, 'desks');
+        desks.body.immovable = true;
+      desks = platforms.create(3120, game.world.height - 150, 'desks');
+        desks.body.immovable = true;
+      desks = platforms.create(3120, game.world.height - 203, 'desks');
+        desks.body.immovable = true;
+      desks = platforms.create(2900, game.world.height - 150, 'desks');
+        desks.body.immovable = true;
+      desks = platforms.create(2900, game.world.height - 203, 'desks');
+        desks.body.immovable = true;
+      desks = platforms.create(2700, game.world.height - 150, 'desks');
+        desks.body.immovable = true;
+      desks = platforms.create(2700, game.world.height - 203, 'desks');
+        desks.body.immovable = true;
+      desks = platforms.create(2600, game.world.height - 150, 'desks');
+        desks.body.immovable = true;
+      desks = platforms.create(2500, game.world.height - 150, 'desks');
+        desks.body.immovable = true;
+      desks = platforms.create(2400, game.world.height - 150, 'desks');
+        desks.body.immovable = true;
+      desks = platforms.create(2300, game.world.height - 150, 'desks');
+        desks.body.immovable = true;
+      desks = platforms.create(2200, game.world.height - 150, 'desks');
+        desks.body.immovable = true;
+      desks = platforms.create(2100, game.world.height - 150, 'desks');
+        desks.body.immovable = true;
+      desks = platforms.create(2000, game.world.height - 203, 'desks');
+        desks.body.immovable = true;
+      desks = platforms.create(2000, game.world.height - 256, 'desks');
+        desks.body.immovable = true;
+      desks = platforms.create(2000, game.world.height - 150, 'desks');
+        desks.body.immovable = true;
+      desks = platforms.create(1800, game.world.height - 150, 'desks');
+        desks.body.immovable = true;
+      desks = platforms.create(1700, game.world.height - 150, 'desks');
+        desks.body.immovable = true;
+      desks = platforms.create(1700, game.world.height - 203, 'desks');
+        desks.body.immovable = true;
+      desks = platforms.create(1700, game.world.height - 256, 'desks');
+        desks.body.immovable = true;
+      desks = platforms.create(1600, game.world.height - 150, 'desks');
+        desks.body.immovable = true;
+      desks = platforms.create(1400, game.world.height - 150, 'desks');
+        desks.body.immovable = true;
+      desks = platforms.create(1400, game.world.height - 203, 'desks');
+        desks.body.immovable = true;
+      desks = platforms.create(1300, game.world.height - 150, 'desks');
+        desks.body.immovable = true;
+      desks = platforms.create(1200, game.world.height - 150, 'desks');
+        desks.body.immovable = true;
+      desks = platforms.create(110, game.world.height - 150, 'desks');
+        desks.body.immovable = true;
+
+
+
+      cursors = game.input.keyboard.createCursorKeys();
 
 //this is the player
       player = game.add.sprite(3800, game.world.height - 150, 'reginald');
         game.physics.arcade.enable(player);
-        player.body.gravity.y = 1000;
+        player.body.gravity.y = 1400;
         player.body.collideWorldBounds = true;
         player.animations.add('right', [1, 2, 3, 4, 3, 2], 10, true);
         player.animations.add('left', [5, 6, 7, 8, 7, 6], 10, true);
         game.camera.follow(player);
 
-//this is the meatloaf
-      meatloaf = game.add.sprite(3700, game.world.hieght - 150, 'meatloaf');
-        game.physics.arcade.enable(meatloaf);
-        meatloaf.body.gravity.y = 10000;
-        meatloaf.collideWorldBounds = true;
-        meatloaf.animations.add('right', [0, 1, 2, 3], 10, true);
-        meatloaf.animations.add('left', [4, 5, 6, 7], 10, true);
+//this is meatloaf1
+      meatloaf1 = game.add.sprite(3000, game.world.hieght - 1500, 'meatloaf1');
+        game.physics.arcade.enable(meatloaf1);
+        meatloaf1.body.gravity.y = 10000
+        meatloaf1.collideWorldBounds = true;
+        meatloaf1.animations.add('right', [0, 1, 2, 3 ], 10, true);
+        meatloaf1.animations.add('left', [4, 5, 6, 7], 10, true);
+//this is meatloaf2
+      meatloaf2 = game.add.sprite(1500, game.world.hieght - 1500, 'meatloaf2');
+        game.physics.arcade.enable(meatloaf2);
+        meatloaf2.body.gravity.y = 10000
+        meatloaf2.collideWorldBounds = true;
+        meatloaf2.animations.add('right', [0, 1, 2, 3 ], 10, true);
+        meatloaf2.animations.add('left', [4, 5, 6, 7], 10, true);
+//this is meatloaf 3
+      meatloaf3 = game.add.sprite(600, game.world.hieght - 1500, 'meatloaf3');
+        game.physics.arcade.enable(meatloaf3);
+        meatloaf3.body.gravity.y = 10000
+        meatloaf3.collideWorldBounds = true;
+        meatloaf3.animations.add('right', [0, 1, 2, 3 ], 10, true);
+        meatloaf3.animations.add('left', [4, 5, 6, 7], 10, true);
 
-      cursors = game.input.keyboard.createCursorKeys();
 
-      game.camera.follow(player);
 
    },
 
    update: function() {
 
-//this is the player movement
-      var hitPlatform = game.physics.arcade.collide(player, platforms);
-      var hitPLatform2 = game.physics.arcade.collide(meatloaf, platforms)
+//collisions
 
+      var hitPlatform = game.physics.arcade.collide(player, platforms);
+      var hitPLatformMeatloaf1 = game.physics.arcade.collide(meatloaf1, platforms)
+      var hitPlatformMeatloaf2 = game.physics.arcade.collide(meatloaf2, platforms)
+      var hitPlatformMeatloaf3 = game.physics.arcade.collide(meatloaf3, platforms)
+      var meatloafHit1 = game.physics.arcade.collide(meatloaf1, player)
+      var meatloafHit2 = game.physics.arcade.collide(meatloaf2, player)
+      var meatloafHit3 = game.physics.arcade.collide(meatloaf3, player)
+      var hitEnd2 = game.physics.arcade.collide(player, end2)
+      var hitEnd1 = game.physics.arcade.collide(player, end1)
+
+      if (player.x < 3200 && player.y > game.world.height - 150) {
+      player.body.x = 3800;
+      player.body.y = game.world.height - 150;
+      }
+
+      if (player.body.x == 100) {
+      game.state.start('endscreen')
+      }
+
+
+
+//this is the player movement
 
       player.body.velocity.x = 0;
 
@@ -77,27 +179,97 @@ var levelState = {
         player.body.velocity.y = -700;
       }
 
-//meatloaf movement
-     meatloaf.body.velocity.y = 0;
-     meatloaf .body.velocity.x = 0;
+//meatloaf1 movement
 
-     if (player.x < meatloaf.x) {
-       meatloaf.animations.play("left");
-       if (meatloaf.x - player.x < 500 && meatloaf.x > 400) {
-          meatloaf.body.velocity.x = -130;
-      }
-    }
-      else {
-        meatloaf.animations.play("right");
-        if (player.x - meatloaf .x < 500 && meatloaf.x < game.world.width) {
-           meatloaf.body.velocity.x = 130;
+     meatloaf1.body.velocity.y = 0;
+     meatloaf1.body.velocity.x = 0;
+
+     if (player.x < meatloaf1.x) {
+       meatloaf1.animations.play("left");
+       if (meatloaf1.x - player.x < 500 && meatloaf1.x > 500) {
+          meatloaf1.body.velocity.x = -130;
         }
+
+      }
+      else {
+        meatloaf1.animations.play("right");
+        if (player.x - meatloaf1 .x < 500 && meatloaf1.x < game.world.width) {
+           meatloaf1.body.velocity.x = 130;
+        }
+
       }
 
-      else if (meatloaf.x == player.x) {
-        meatlo
+    if (player.y + 200 < meatloaf1.y) {
+      player.animations.stop();
+      frame = 0;
+      meatloaf1.body.velocity.x = 0;
+    }
+
+    //if (meatloafHit1) {
+      //player.body.x = 3800
+      //meatloaf1.body.x = 3000
+    //}
+
+
+//meatloaf2 movement
+    meatloaf2.body.velocity.y = 0;
+    meatloaf2.body.velocity.x = 0;
+
+    if (player.x < meatloaf2.x) {
+      meatloaf2.animations.play("left");
+      if (meatloaf2.x - player.x < 500 && meatloaf2.x > 500) {
+         meatloaf2.body.velocity.x = -160;
+       }
+
+     }
+     else {
+       meatloaf2.animations.play("right");
+       if (player.x - meatloaf2 .x < 500 && meatloaf2.x < game.world.width) {
+          meatloaf2.body.velocity.x = 130;
+       }
+
+     }
+
+   if (player.y + 200 < meatloaf2.y) {
+     player.animations.stop();
+     frame = 0;
+    meatloaf2.body.velocity.x = 0;
+   }
+
+   //if (meatloafHit2) {
+     //player.body.x = 3800
+     //meatloaf2.body.x = 3000
+   //}
+
+//meatloaf3 movement
+   meatloaf3.body.velocity.y = 0;
+   meatloaf3.body.velocity.x = 0;
+
+   if (player.x < meatloaf3.x) {
+     meatloaf3.animations.play("left");
+     if (meatloaf3.x - player.x < 500 && meatloaf3.x > 500) {
+        meatloaf3.body.velocity.x = -130;
       }
 
- }
+    }
+    else {
+      meatloaf3.animations.play("right");
+      if (player.x - meatloaf3 .x < 500 && meatloaf3.x < game.world.width) {
+         meatloaf3.body.velocity.x = 130;
+      }
 
-};
+    }
+
+  if (player.y + 200 < meatloaf3.y) {
+    player.animations.stop();
+    frame = 0;
+    meatloaf3.body.velocity.x = 0;
+  }
+
+  //if (meatloafHit3) {
+    //player.body.x = 3800
+    //meatloaf3.body.x = 3000
+  //}
+
+  }
+   };
