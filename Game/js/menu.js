@@ -8,9 +8,9 @@ var menuState = {
 
      menubutton = game.add.button(game.world.centerX, game.world.centerY, 'menubutton');
      menubutton.anchor.setTo(0.5,0.5);
-     if (menubutton.onInputUp){
-       game.state.start('level')
-     }
+     menubutton.onInputUp.add(this.startGame);
+
+  },
 
       // create the scene
       startGame: function() {
