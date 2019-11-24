@@ -4,6 +4,8 @@
  */
 var menuState = {
   create: function() {
+
+
      title = game.add.sprite(400, 300, 'menutitle');
 
      menubutton = game.add.button(game.world.centerX, game.world.centerY, 'menubutton', actionOnClick, this, 2, 1, 0);
