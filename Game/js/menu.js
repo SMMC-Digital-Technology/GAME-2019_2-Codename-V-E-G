@@ -4,11 +4,10 @@
  */
 var menuState = {
   create: function() {
-     title = game.add.sprite(400, 300, 'title');
+     title = game.add.sprite(400, 300, 'menutitle');
 
-     menubutton = game.add.button(game.world.centerX, game.world.centerY, 'button');
+     menubutton = game.add.button(game.world.centerX, game.world.centerY, 'menubutton');
      menubutton.anchor.setTo(0.5,0.5);
-     menubutton.onInputUp.add(this.startGame);
      if (menubutton.onInputUp){
        game.state.start('level')
      }

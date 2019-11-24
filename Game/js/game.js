@@ -7,7 +7,7 @@ game.state.add('level', levelState);
 game.state.add('gameover', gameoverState);
 
 game.global = {
-  score = 0;
+  //score = 0
 };
 
 
@@ -15,7 +15,6 @@ game.global = {
    // eg score = 0;
    // access using game.global
    // eg game.gloabl.score
-};
 
 game.state.start('boot');
 //Bruh

@@ -29,20 +29,19 @@ var levelState = {
 //this is the player
       player = game.add.sprite(3800, game.world.height - 150, 'reginald');
         game.physics.arcade.enable(player);
-        //player.body.bounce.y = 0.2;
         player.body.gravity.y = 1000;
         player.body.collideWorldBounds = true;
         player.animations.add('right', [1, 2, 3, 4, 3, 2], 10, true);
         player.animations.add('left', [5, 6, 7, 8, 7, 6], 10, true);
         game.camera.follow(player);
 
-//this is the enemy
+//this is the meatloaf
       meatloaf = game.add.sprite(3700, game.world.hieght - 150, 'meatloaf');
         game.physics.arcade.enable(meatloaf);
-        meatloaf.body.gravity.y = 1000;
+        meatloaf.body.gravity.y = 10000;
         meatloaf.collideWorldBounds = true;
-        meatloaf.animations.add('right', [1, 2, 3, 4], 10, true);
-        meatloaf.animations.add('left', [5, 6, 7, 8], 10, true);
+        meatloaf.animations.add('right', [0, 1, 2, 3], 10, true);
+        meatloaf.animations.add('left', [4, 5, 6, 7], 10, true);
 
       cursors = game.input.keyboard.createCursorKeys();
 
@@ -54,6 +53,8 @@ var levelState = {
 
 //this is the player movement
       var hitPlatform = game.physics.arcade.collide(player, platforms);
+      var hitPLatform2 = game.physics.arcade.collide(meatloaf, platforms)
+
 
       player.body.velocity.x = 0;
 
@@ -76,22 +77,27 @@ var levelState = {
         player.body.velocity.y = -700;
       }
 
-//Baddie movement
+//meatloaf movement
      meatloaf.body.velocity.y = 0;
      meatloaf .body.velocity.x = 0;
 
      if (player.x < meatloaf.x) {
-      meatloaf.animations.play("left");
-      if (meatloaf.x - player.x < 100 && meatloaf.x > 400) {
-        meatloaf.body.velocity.x = -300;
+       meatloaf.animations.play("left");
+       if (meatloaf.x - player.x < 500 && meatloaf.x > 400) {
+          meatloaf.body.velocity.x = -130;
       }
     }
       else {
         meatloaf.animations.play("right");
-      if (player.x - baddie.x < 100 && meatloaf.x < game.world.width) {
-         meatloaf.body.velocity.x = 100;
+        if (player.x - meatloaf .x < 500 && meatloaf.x < game.world.width) {
+           meatloaf.body.velocity.x = 130;
+        }
       }
-   }
+
+      else if (meatloaf.x == player.x) {
+        meatlo
+      }
+
  }
 
 };
