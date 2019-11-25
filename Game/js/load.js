@@ -13,6 +13,7 @@ var loadState = {
       game.load.image('menutitle', 'assets/VEG TITLE.png');
       //game.load.image('help', 'assets/help.png');
       game.load.image('menubutton', 'assets/button.png');
+      game.load.image('retrybutton', 'assets/retrybutton.png');
       game.load.image('backgroundmenu', 'assets/backgroundmenu.png')
       game.load.spritesheet('reginald', 'assets/REGINALD BOI.png', 42, 53);
       game.load.image('ground', 'assets/platform.png');
