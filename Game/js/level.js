@@ -193,14 +193,14 @@ var levelState = {
         desks.body.immovable = true;
       desks = platforms.create(100, game.world.height - 680, 'desks');
         desks.body.immovable = true;
-      desks = platforms.create(300, game.world.height - 362, 'desks');
+      desks = desk.create(300, game.world.height - 309, 'desks');
         desks.body.immovable = true;
 
 //part 3
 
       desks = desk.create(200, game.world.height - 468, 'desks');
         desks.body.immovable = true;
-      desks = desk.create(300, game.world.height - 256, 'desks');
+      desks = desk.create(300, game.world.height - 203, 'desks');
         desks.body.immovable = true;
       desks = desk.create(300, game.world.height - 680, 'desks');
         desks.body.immovable = true;
@@ -263,7 +263,7 @@ var levelState = {
 
       lady = game.add.sprite(250, 750, 'lady');
         game.physics.arcade.enable(lady);
-        lady.body.gravity.y = 500;
+        lady.body.gravity.y = 50;
         lady.collideWorldBounds = true;
         lady.animations.add('ground', [1, 5, 3, 2, 1], 10, true)
 
@@ -448,8 +448,8 @@ var levelState = {
 
    }
   else {
-    if (player.x - lady .x < 300 && lady.x < game.world.width && ladyHitPlatform && lady.body.touching.down) {
-      lady.body.velocity.y = -10000;
+    if (player.x - lady .x < 300 && lady.x < game.world.width && ladyHitPlatform) {
+      lady.body.velocity.y = -2000;
      }
 
    }
