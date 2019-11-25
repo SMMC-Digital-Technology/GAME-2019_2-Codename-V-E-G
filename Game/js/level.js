@@ -22,10 +22,12 @@ var levelState = {
 
       paper = game.add.group();
       paper.enableBody = true;
-      paper1 = paper.create(1700, game.world.height - 309, 'paper')
-      paper1.body.immovable = true
+      paper1 = paper.create(1700, game.world.height - 309, 'paper');
       paper1.alpha = 100
-      paper2 = paper.create()
+      paper2 = paper.create(1000, game.world.height - 309, 'paper');
+      paper1.alpha = 100;
+      paper3 = paper.create(400, game.world.height - 733, 'paper');
+      paper.alpha = 100;
 
       platforms = game.add.group();
       platforms.enableBody = true;
@@ -287,16 +289,28 @@ var levelState = {
       var hitEnd2 = game.physics.arcade.collide(player, end2);
       var hitEnd1 = game.physics.arcade.collide(player, end1);
       var hitDesk = game.physics.arcade.collide(player, desk);
+      var hitPaper1 = game.physics.arcade.collide(player, paper1);
+      var hitPaper2 = game.physics.arcade.collide(player, paper2);
+      var hitPaper3 = game.physics.arcade.collide(player, paper3)
+      var hitLady = game.physics.arcade.collide(player, lady)
 
 
       if (player.x < 3200 && player.y > game.world.height - 150) {
-      game.state.start('gameover')
+        game.state.start('gameover')
 
       }
 
-      if (player.body.x 100 && player.body.y == 900) {
-      game.state.start('endscreen')
-      }
+if (hitPaper1) (
+  paper1.alpha = 0
+)
+
+if (hitPaper2) {
+  paper2.alpha = 0;
+}
+
+if (hitPaper3) {
+  paper3.alpha = 0;
+}
 
 
 
@@ -453,6 +467,11 @@ var levelState = {
      }
 
    }
+
+  if (hitLady) {
+    player.x = 400
+    player.y = game.world.height - 733
+  }
 
 
 
