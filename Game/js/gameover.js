@@ -7,14 +7,8 @@ var gameoverState = {
 
       gameoverbutton = game.add.button(window.innerWidth / 2.3, game.world.centerY, '', actionOnClick, this, 2, 1, 0);
       function actionOnClick(){
-<<<<<<< HEAD
         game.state.start('menu')
       }
-=======
-        game.state.start('menu');
-
-   }
->>>>>>> 13d95e5769d656919433bcca0927b7bded1a8a59
 
     }
 
