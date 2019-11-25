@@ -26,6 +26,7 @@ var loadState = {
       game.load.image('ground2', 'assets/platform.png');
       game.load.spritesheet('lady', 'assets/lady person.png', 64, 64)
       game.load.image('paper', 'assets/paper.png')
+      game.load.image('gameoverTitle', 'assets/hinttitle.png')
    },
 
    create: function() {

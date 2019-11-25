@@ -263,7 +263,7 @@ var levelState = {
 
       lady = game.add.sprite(250, 750, 'lady');
         game.physics.arcade.enable(lady);
-        lady.body.gravity.y = 50;
+        lady.body.gravity.y = 1000;
         lady.collideWorldBounds = true;
         lady.animations.add('ground', [1, 5, 3, 2, 1], 10, true)
 
@@ -294,7 +294,7 @@ var levelState = {
 
       }
 
-      if (player.body.x == 100 && player.body.y == 200) {
+      if (player.body.x 100 && player.body.y == 900) {
       game.state.start('endscreen')
       }
 
@@ -449,7 +449,7 @@ var levelState = {
    }
   else {
     if (player.x - lady .x < 300 && lady.x < game.world.width && ladyHitPlatform) {
-      lady.body.velocity.y = -2000;
+      lady.body.velocity.y = -1200;
      }
 
    }
