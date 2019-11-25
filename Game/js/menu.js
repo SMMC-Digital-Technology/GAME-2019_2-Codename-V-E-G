@@ -10,9 +10,9 @@ var menuState = {
 
      //menuBackground = game.add.sprite(0, 0, 'backgroundmenu')
 
-     title = game.add.sprite(game.world.centerX,100, 'menutitle');
+     title = game.add.sprite(window.innerWidth / 3.4, 100, 'menutitle');
 
-     menubutton = game.add.button(game.world.centerX, game.world.centerY, 'menubutton', actionOnClick, this, 2, 1, 0);
+     menubutton = game.add.button(window.innerWidth / 2, game.world.centerY, 'menubutton', actionOnClick, this, 2, 1, 0);
      function actionOnClick(){
        game.state.start('level');
      }
