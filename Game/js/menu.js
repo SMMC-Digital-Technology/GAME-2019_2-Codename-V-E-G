@@ -8,7 +8,8 @@ var menuState = {
 
 
 
-     //menuBackground = game.add.sprite(0, 0, 'backgroundmenu')
+     menuBackground = game.add.sprite(0, 0, 'backgroundmenu')
+     menuBackground.scale.setTo(window.innerWidth, window.innerHeight)
 
      title = game.add.sprite(window.innerWidth / 3.4, 100, 'menutitle');
 
