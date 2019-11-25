@@ -5,9 +5,14 @@ game.state.add('load', loadState);
 game.state.add('menu', menuState);
 game.state.add('level', levelState);
 game.state.add('gameover', gameoverState);
+//game.state.add('endscreen', endState);
 
 game.global = {
+<<<<<<< HEAD
   score = 0
+=======
+
+>>>>>>> e4f4a2774a8ed19b6e29782e9b3fa05ace35acc1
 };
 
 

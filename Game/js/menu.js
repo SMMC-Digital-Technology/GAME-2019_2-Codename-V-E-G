@@ -4,15 +4,23 @@
  */
 var menuState = {
   create: function() {
-     title = game.add.sprite(400, 300, 'menutitle');
 
-     menubutton = game.add.button(game.world.centerX, game.world.centerY, 'menubutton');
+
+     title = game.add.sprite(360,0, 'menutitle');
+
+     menubutton = game.add.button(game.world.centerX, game.world.centerY, 'menubutton', actionOnClick, this, 2, 1, 0);
      menubutton.anchor.setTo(0.5,0.5);
-     if (menubutton.onInputUp){
-       game.state.start('level')
+     function actionOnClick(){
+       game.state.start('level');
      }
 
       // create the scene
+<<<<<<< HEAD
+=======
+        }
+
+     };
+>>>>>>> e4f4a2774a8ed19b6e29782e9b3fa05ace35acc1
 
    // this is how you write a function
    // note the comma after the } above
