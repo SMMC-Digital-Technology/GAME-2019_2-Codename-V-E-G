@@ -263,7 +263,7 @@ var levelState = {
 
       lady = game.add.sprite(250, 750, 'lady');
         game.physics.arcade.enable(lady);
-        lady.body.gravity.y = 1000;
+        lady.body.gravity.y = 500;
         lady.collideWorldBounds = true;
         lady.animations.add('ground', [1, 5, 3, 2, 1], 10, true)
 
@@ -448,8 +448,8 @@ var levelState = {
 
    }
   else {
-    if (player.x - lady .x < 300 && lady.x < game.world.width && ladyHitPlatform && lady.body.touching.gdown) {
-      lady.body.velocity.y = -700;
+    if (player.x - lady .x < 300 && lady.x < game.world.width && ladyHitPlatform && lady.body.touching.down) {
+      lady.body.velocity.y = -10000;
      }
 
    }
