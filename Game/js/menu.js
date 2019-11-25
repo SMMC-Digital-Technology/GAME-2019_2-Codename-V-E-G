@@ -8,6 +8,8 @@ var menuState = {
 
      title = game.add.sprite(360,0, 'menutitle');
 
+     menuBackground = game.add.sprite(0, 0, 'backgroundmenu')
+
      menubutton = game.add.button(game.world.centerX, game.world.centerY, 'menubutton', actionOnClick, this, 2, 1, 0);
      menubutton.anchor.setTo(0.5,0.5);
      function actionOnClick(){

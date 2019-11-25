@@ -226,16 +226,16 @@ var levelState = {
         meatloaf1.animations.add('right', [0, 1, 2, 3 ], 10, true);
         meatloaf1.animations.add('left', [4, 5, 6, 7], 10, true);
 //this is meatloaf2
-      meatloaf2 = game.add.sprite(1500, 850, 'meatloaf2');
+      meatloaf2 = game.add.sprite(1200, 750, 'meatloaf2');
         game.physics.arcade.enable(meatloaf2);
         meatloaf2.body.gravity.y = 10000
         meatloaf2.collideWorldBounds = true;
         meatloaf2.animations.add('right', [0, 1, 2, 3 ], 10, true);
         meatloaf2.animations.add('left', [4, 5, 6, 7], 10, true);
 //this is meatloaf 3
-      meatloaf3 = game.add.sprite(600, 850, 'meatloaf3');
+      meatloaf3 = game.add.sprite(600, 400, 'meatloaf3');
         game.physics.arcade.enable(meatloaf3);
-        meatloaf3.body.gravity.y = 10000
+        meatloaf3.body.gravity.y = 20000
         meatloaf3.collideWorldBounds = true;
         meatloaf3.animations.add('right', [0, 1, 2, 3 ], 10, true);
         meatloaf3.animations.add('left', [4, 5, 6, 7], 10, true);
@@ -322,7 +322,10 @@ var levelState = {
     if (meatloafHit1) {
       player.x = 3500
       meatloaf1.body.x = 2500
-      meatloaf1.body.y = 203
+      meatloaf1.body.y = 750
+      meatloaf2.body.x = 1000
+      meatloaf3.body.x = 400
+      meatloaf3.body.y = 1000
     }
 
 
@@ -333,14 +336,14 @@ var levelState = {
     if (player.x < meatloaf2.x) {
       meatloaf2.animations.play("left");
       if (meatloaf2.x - player.x < 500 && meatloaf2.x > 500) {
-         meatloaf2.body.velocity.x = -160;
+         meatloaf2.body.velocity.x = -180;
        }
 
      }
      else {
        meatloaf2.animations.play("right");
        if (player.x - meatloaf2 .x < 500 && meatloaf2.x < game.world.width) {
-          meatloaf2.body.velocity.x = 130;
+          meatloaf2.body.velocity.x = 180;
        }
 
      }
@@ -353,7 +356,11 @@ var levelState = {
 
    if (meatloafHit2) {
      player.body.x = 3500
-     meatloaf2.body.x = 3000
+     meatloaf2.body.x = 1000
+     meatloaf1.body.x = 2500
+     meatloaf1.body.y = 750
+     meatloaf3.body.x = 400
+     meatloaf3.body.y = 1000
    }
 
 //meatloaf3 movement
@@ -363,14 +370,14 @@ var levelState = {
    if (player.x < meatloaf3.x) {
      meatloaf3.animations.play("left");
      if (meatloaf3.x - player.x < 500 && meatloaf3.x > 500) {
-        meatloaf3.body.velocity.x = -130;
+        meatloaf3.body.velocity.x = -90;
       }
 
     }
     else {
       meatloaf3.animations.play("right");
       if (player.x - meatloaf3 .x < 500 && meatloaf3.x < game.world.width) {
-         meatloaf3.body.velocity.x = 130;
+         meatloaf3.body.velocity.x = 90;
       }
 
     }
@@ -383,7 +390,13 @@ var levelState = {
 
   if (meatloafHit3) {
     player.body.x = 3500
-    meatloaf3.body.x = 3000
+    meatloaf3.body.x = 400
+    meatloaf3.body.y = 1000
+    meatloaf2.body.x = 1000
+    meatloaf1.body.x = 2500
+    meatloaf1.body.x = 2500
+    meatloaf1.body.y = 750
+
   }
 
   }
