@@ -20,11 +20,11 @@ var loadState = {
       game.load.spritesheet('meatloaf2', 'assets/OH MY.png', 46, 59);
       game.load.spritesheet('meatloaf3', 'assets/OH MY.png', 46, 59);
       game.load.image('desks', 'assets/New Piskel (18).png');
-      game.load.image('desk', 'assets/New Piskel (18).png');
       game.load.image('end1', 'assets/end.png');
       game.load.image('end2', 'assets/end.png');
       game.load.image('ground2', 'assets/platform.png');
       game.load.spritesheet('lady', 'assets/lady person.png', 64, 64)
+      game.load.image('paper', 'assets/paper.png')
    },
 
    create: function() {

@@ -19,6 +19,14 @@ var levelState = {
       background  = game.add.sprite(0, 0, 'background');
       background.height = game.world.height;
       background.width = game.world.width;
+
+      paper = game.add.group();
+      paper.enableBody = true;
+      paper1 = paper.create(1700, game.world.height - 309, 'paper')
+      paper1.body.immovable = true
+      paper1.alpha = 100
+      paper2 = paper.create()
+
       platforms = game.add.group();
       platforms.enableBody = true;
       platforms.immovable = true;
@@ -282,13 +290,7 @@ var levelState = {
 
 
       if (player.x < 3200 && player.y > game.world.height - 150) {
-      player.body.y = game.world.height - 150;
-      player.x = 3500
-      meatloaf1.body.x = 2500
-      meatloaf1.body.y = 750
-      meatloaf2.body.x = 1200
-      meatloaf3.body.x = 600
-      meatloaf3.body.y = 400
+      game.state.start('gameover')
 
       }
 
@@ -351,14 +353,14 @@ var levelState = {
       meatloaf1.body.velocity.x = 0;
     }
 
-    if (meatloafHit1) {
-      player.x = 3500
-      meatloaf1.body.x = 2500
-      meatloaf1.body.y = 750
-      meatloaf2.body.x = 1200
-      meatloaf3.body.x = 600
-      meatloaf3.body.y = 400
-    }
+  if (meatloafHit1 && player.body.x > 1701) {
+    player.x = 3500
+    meatloaf1.body.x = 2500
+    meatloaf1.body.y = 750
+    meatloaf2.body.x = 1200
+    meatloaf3.body.x = 600
+    meatloaf3.body.y = 400
+  }
 
 
 //meatloaf2 movement
@@ -387,13 +389,15 @@ var levelState = {
     meatloaf2.body.velocity.x = 0;
    }
 
-   if (meatloafHit2) {
-     player.body.x = 3500
+   if (meatloafHit2 && player.body.x < 1700) {
+     player.body.x = 1700
+     player.body.y = game.world.height - 309
      meatloaf2.body.x = 1200
      meatloaf1.body.x = 2500
      meatloaf1.body.y = 750
      meatloaf3.body.x = 600
      meatloaf3.body.y = 400
+     paper1.alpha = 0
    }
 
 //meatloaf3 movement
@@ -422,8 +426,9 @@ var levelState = {
     meatloaf3.body.velocity.x = 0;
   }
 
-  if (meatloafHit3) {
-    player.body.x = 3500
+  if (meatloafHit3 && player.body.x < 1000) {
+    player.body.x = 1000
+    player.body.y = game.world.height - 309
     meatloaf3.body.x = 600
     meatloaf3.body.y = 400
     meatloaf2.body.x = 1200
@@ -434,7 +439,6 @@ var levelState = {
   }
 
 // Lady movement
-  lady.body.velocity.y = 0
   lady.body.velocity.x = 0
 
   if (player.x < lady.x) {
