@@ -185,6 +185,8 @@ var levelState = {
         desks.body.immovable = true;
       desks = platforms.create(100, game.world.height - 680, 'desks');
         desks.body.immovable = true;
+      desks = platforms.create(300, game.world.height - 362, 'desks');
+        desks.body.immovable = true;
 
 //part 3
 
@@ -200,8 +202,7 @@ var levelState = {
         desks.body.immovable = true;
       desks = desk.create(1, game.world.height - 150, 'desks');
         desks.body.immovable = true;
-    //  desks = platforms.create(300, game.world.height - 362, 'desks');
-      //  desks.body.immovable = true;
+
     //  desks = platforms.create(0, game.world.height - 150, 'desks');
       //  desks.body.immovable = true;
     //  desks = platforms.create(600, game.world.height - 203, 'desks');
