@@ -16,9 +16,9 @@ var loadState = {
       //game.load,image('backgroundmenu', 'assets/background2.png')
       game.load.spritesheet('reginald', 'assets/REGINALD BOI.png', 42, 53);
       game.load.image('ground', 'assets/platform.png');
-      game.load.spritesheet('meatloaf1', 'assets/OH MY.png', 64, 64);
-      game.load.spritesheet('meatloaf2', 'assets/OH MY.png', 64, 64);
-      game.load.spritesheet('meatloaf3', 'assets/OH MY.png', 64, 64);
+      game.load.spritesheet('meatloaf1', 'assets/OH MY.png', 46, 59);
+      game.load.spritesheet('meatloaf2', 'assets/OH MY.png', 46, 59);
+      game.load.spritesheet('meatloaf3', 'assets/OH MY.png', 46, 59);
       game.load.image('desks', 'assets/New Piskel (18).png');
       game.load.image('end1', 'assets/end.png');
       game.load.image('end2', 'assets/end.png');
