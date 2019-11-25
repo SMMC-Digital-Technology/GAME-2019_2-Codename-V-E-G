@@ -3,14 +3,14 @@
  * use game.state.start('level') to go levelState
  */
 var menuState = {
-   create: function() {
-     title = game.add.sprite(400, 300, 'title')
+  create: function() {
+     title = game.add.sprite(400, 300, 'menutitle');
 
-     var menubutton = game.add.button(game.world.centerX, game.world.centerY, 'button');
-    menubutton.anchor.setTo(0.5,0.5);
-    menubutton.onInputUp.add(this.startGame);
-    if (menubutton.onInputUp){
-      game.state.start('level')
+     menubutton = game.add.button(game.world.centerX, game.world.centerY, 'menubutton');
+     menubutton.anchor.setTo(0.5,0.5);
+     if (menubutton.onInputUp){
+       game.state.start('level')
+     }
 
       // create the scene
 
