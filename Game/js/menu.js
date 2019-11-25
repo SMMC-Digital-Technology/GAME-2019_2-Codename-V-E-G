@@ -19,9 +19,12 @@ var menuState = {
      }
 
       // create the scene
+<<<<<<< HEAD
+=======
         }
 
      };
+>>>>>>> e4f4a2774a8ed19b6e29782e9b3fa05ace35acc1
 
    // this is how you write a function
    // note the comma after the } above
