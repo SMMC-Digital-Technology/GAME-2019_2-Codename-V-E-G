@@ -3,7 +3,7 @@
  */
 var gameoverState = {
    create: function() {
-      // create the screen
+      hinttitle =
 
       gameoverbutton = game.add.button(window.innerWidth / 5, game.world.centerY, 'retrybutton', actionOnClick, this, 2, 1, 0);
       function actionOnClick(){
