@@ -3,7 +3,7 @@
  */
 var gameoverState = {
    create: function() {
-      // create the screen
+      hinttitle =
 
       game.add.sprite(window.innerWidth / 3.4, 100, 'gameoverTitle')
 
