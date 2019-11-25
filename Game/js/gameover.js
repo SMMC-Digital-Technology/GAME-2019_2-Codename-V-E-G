@@ -4,18 +4,17 @@
 var gameoverState = {
    create: function() {
       // create the screen
+      gameoverBackground = game.add.sprite(0, 0, 'gameoverbackground')
 
       //add button
-      //gameoverbutton = game.add.button(game.world.centerX, game.world.centerY, 'gameoverbutton');
-      //gameoverbutton.anchor.setTo(0.5,0.5);
-      //gameoverbutton.onInputUp.add(this.buttonclick);
-
-   },
-
-       // create the scene
+      retrybutton = game.add.button(window.innerWidth / 2.3, game.world.centerY, 'retrybutton', actionOnClick, this, 2, 1, 0);
+      function actionOnClick(){
+        game.state.start('menu');
+      //retrybutton = game.add.button(game.world.centerX, game.world.centerY, 'retrybutton');
+      //retrybutton.anchor.setTo(0.5,0.5);
+      //retrybutton.onInputUp.add(this.buttonclick);
          //}
    //},
-    buttonClick: function() {
-     game.state.start('menu');
+
    }
 };
