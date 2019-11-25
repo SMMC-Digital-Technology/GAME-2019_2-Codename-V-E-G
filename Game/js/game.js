@@ -5,7 +5,7 @@ game.state.add('load', loadState);
 game.state.add('menu', menuState);
 game.state.add('level', levelState);
 game.state.add('gameover', gameoverState);
-game.state.add('endscreen', endState);
+//game.state.add('endscreen', endState);
 
 game.global = {
 

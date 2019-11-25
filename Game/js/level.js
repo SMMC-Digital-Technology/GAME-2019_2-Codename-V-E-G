@@ -23,9 +23,9 @@ var levelState = {
       platforms.enableBody = true;
       platforms.immovable = true;
 
-      var ground = platforms.create(3200, (6300 - 500) / 6300 * game.world.height, 'ground');
+      var ground = platforms.create(0, (6300 - 500) / 6300 * game.world.height, 'ground');
         ground.body.immovable = true;
-        ground.scale.setTo(400, 1);
+        ground.scale.setTo(10, 1);
         ground.alpha = 0;
 
       end = game.add.group();
@@ -89,8 +89,121 @@ var levelState = {
         desks.body.immovable = true;
       desks = platforms.create(1200, game.world.height - 150, 'desks');
         desks.body.immovable = true;
-      desks = platforms.create(110, game.world.height - 150, 'desks');
+      desks = platforms.create(1100, game.world.height - 150, 'desks');
         desks.body.immovable = true;
+      desks = platforms.create(1400, game.world.height - 256, 'desks');
+        desks.body.immovable = true;
+      desks = platforms.create(1000, game.world.height - 150, 'desks');
+        desks.body.immovable = true;
+      desks = platforms.create(1000, game.world.height - 203, 'desks');
+        desks.body.immovable = true;
+      desks = platforms.create(1000, game.world.height - 256, 'desks');
+        desks.body.immovable = true;
+      desks = platforms.create(900, game.world.height - 150, 'desks');
+        desks.body.immovable = true;
+      desks = platforms.create(900, game.world.height - 150, 'desks');
+        desks.body.immovable = true;
+      desks = platforms.create(700, game.world.height - 203, 'desks');
+        desks.body.immovable = true;
+      desks = platforms.create(700, game.world.height - 150, 'desks');
+        desks.body.immovable = true;
+      desks = platforms.create(600, game.world.height - 150, 'desks');
+        desks.body.immovable = true;
+      desks = platforms.create(600, game.world.height - 203, 'desks');
+        desks.body.immovable = true;
+      desks = platforms.create(600, game.world.height - 256, 'desks');
+        desks.body.immovable = true;
+      desks = platforms.create(600, game.world.height - 309, 'desks');
+        desks.body.immovable = true;
+      desks = platforms.create(600, game.world.height - 362, 'desks');
+        desks.body.immovable = true;
+      desks = platforms.create(500, game.world.height - 150, 'desks');
+        desks.body.immovable = true;
+      desks = platforms.create(700, game.world.height - 256, 'desks');
+        desks.body.immovable = true;
+      desks = platforms.create(500, game.world.height - 150, 'desks');
+        desks.body.immovable = true;
+      desks = platforms.create(500, game.world.height - 256, 'desks');
+        desks.body.immovable = true;
+      desks = platforms.create(500, game.world.height - 203, 'desks');
+        desks.body.immovable = true;
+      desks = platforms.create(500, game.world.height - 309, 'desks');
+        desks.body.immovable = true;
+      desks = platforms.create(500, game.world.height - 362, 'desks');
+        desks.body.immovable = true;
+      desks = platforms.create(500, game.world.height - 415, 'desks');
+        desks.body.immovable = true;
+      desks = platforms.create(500, game.world.height - 468, 'desks');
+        desks.body.immovable = true;
+      desks = platforms.create(500, game.world.height - 521, 'desks');
+        desks.body.immovable = true;
+      desks = platforms.create(400, game.world.height - 150, 'desks');
+        desks.body.immovable = true;
+      desks = platforms.create(400, game.world.height - 203, 'desks');
+        desks.body.immovable = true;
+      desks = platforms.create(400, game.world.height - 256, 'desks');
+        desks.body.immovable = true;
+      desks = platforms.create(400, game.world.height - 309, 'desks');
+        desks.body.immovable = true;
+      desks = platforms.create(400, game.world.height - 362, 'desks');
+        desks.body.immovable = true;
+      desks = platforms.create(400, game.world.height - 415, 'desks');
+        desks.body.immovable = true;
+      desks = platforms.create(400, game.world.height - 468, 'desks');
+        desks.body.immovable = true;
+      desks = platforms.create(400, game.world.height - 521, 'desks');
+        desks.body.immovable = true;
+      desks = platforms.create(400, game.world.height - 574, 'desks');
+        desks.body.immovable = true;
+      desks = platforms.create(400, game.world.height - 623, 'desks');
+        desks.body.immovable = true;
+      desks = platforms.create(400, game.world.height - 680, 'desks');
+        desks.body.immovable = true;
+
+      desks = platforms.create(100, game.world.height - 150, 'desks');
+        desks.body.immovable = true;
+      desks = platforms.create(100, game.world.height - 203, 'desks');
+        desks.body.immovable = true;
+      desks = platforms.create(100, game.world.height - 256, 'desks');
+        desks.body.immovable = true;
+      desks = platforms.create(100, game.world.height - 309, 'desks');
+        desks.body.immovable = true;
+      desks = platforms.create(100, game.world.height - 362, 'desks');
+        desks.body.immovable = true;
+      desks = platforms.create(100, game.world.height - 415, 'desks');
+        desks.body.immovable = true;
+      desks = platforms.create(100, game.world.height - 468, 'desks');
+        desks.body.immovable = true;
+      desks = platforms.create(100, game.world.height - 521, 'desks');
+        desks.body.immovable = true;
+      desks = platforms.create(100, game.world.height - 574, 'desks');
+        desks.body.immovable = true;
+      desks = platforms.create(100, game.world.height - 623, 'desks');
+        desks.body.immovable = true;
+      desks = platforms.create(100, game.world.height - 680, 'desks');
+        desks.body.immovable = true;
+
+      desks = platforms.create(200, game.world.height - 623, 'desks');
+        desks.body.immovable = true;
+      desks = platforms.create(200, game.world.height - 468, 'desks');
+        desks.body.immovable = true;
+      desks = platforms.create(200, game.world.height - 309, 'desks');
+        desks.body.immovable = true;
+      desks = platforms.create(200, game.world.height - 150, 'desks');
+        desks.body.immovable = true;
+      desks = platforms.create(300, game.world.height - 680, 'desks');
+        desks.body.immovable = true;
+      desks = platforms.create(300, game.world.height - 521, 'desks');
+        desks.body.immovable = true;
+      desks = platforms.create(300, game.world.height - 362, 'desks');
+        desks.body.immovable = true;
+      desks = platforms.create(0, game.world.height - 150, 'desks');
+        desks.body.immovable = true;
+      desks = platforms.create(600, game.world.height - 203, 'desks');
+        desks.body.immovable = true;
+
+
+
 
 
 
@@ -106,21 +219,21 @@ var levelState = {
         game.camera.follow(player);
 
 //this is meatloaf1
-      meatloaf1 = game.add.sprite(3000, game.world.hieght - 1500, 'meatloaf1');
+      meatloaf1 = game.add.sprite(3000, game.world.height - 1500, 'meatloaf1');
         game.physics.arcade.enable(meatloaf1);
         meatloaf1.body.gravity.y = 10000
         meatloaf1.collideWorldBounds = true;
         meatloaf1.animations.add('right', [0, 1, 2, 3 ], 10, true);
         meatloaf1.animations.add('left', [4, 5, 6, 7], 10, true);
 //this is meatloaf2
-      meatloaf2 = game.add.sprite(1500, game.world.hieght - 1500, 'meatloaf2');
+      meatloaf2 = game.add.sprite(1500, game.world.height - 1500, 'meatloaf2');
         game.physics.arcade.enable(meatloaf2);
         meatloaf2.body.gravity.y = 10000
         meatloaf2.collideWorldBounds = true;
         meatloaf2.animations.add('right', [0, 1, 2, 3 ], 10, true);
         meatloaf2.animations.add('left', [4, 5, 6, 7], 10, true);
 //this is meatloaf 3
-      meatloaf3 = game.add.sprite(600, game.world.hieght - 1500, 'meatloaf3');
+      meatloaf3 = game.add.sprite(600, game.world.height - 1500, 'meatloaf3');
         game.physics.arcade.enable(meatloaf3);
         meatloaf3.body.gravity.y = 10000
         meatloaf3.collideWorldBounds = true;
@@ -135,13 +248,14 @@ var levelState = {
 
 //collisions
 
+
       var hitPlatform = game.physics.arcade.collide(player, platforms);
       var hitPLatformMeatloaf1 = game.physics.arcade.collide(meatloaf1, platforms)
       var hitPlatformMeatloaf2 = game.physics.arcade.collide(meatloaf2, platforms)
       var hitPlatformMeatloaf3 = game.physics.arcade.collide(meatloaf3, platforms)
-      var meatloafHit1 = game.physics.arcade.collide(meatloaf1, player)
-      var meatloafHit2 = game.physics.arcade.collide(meatloaf2, player)
-      var meatloafHit3 = game.physics.arcade.collide(meatloaf3, player)
+      //var meatloafHit1 = game.phsyics.arcade.collide(meatloaf1, player)
+      //var meatloafHit2 = game.phsyics.arcade.collide(meatloaf2, player)
+      //var meatloafHit3 = game.phsyics.arcade.collide(meatloaf3, player)
       var hitEnd2 = game.physics.arcade.collide(player, end2)
       var hitEnd1 = game.physics.arcade.collide(player, end1)
 
@@ -150,9 +264,9 @@ var levelState = {
       player.body.y = game.world.height - 150;
       }
 
-      if (player.body.x == 100) {
-      game.state.start('endscreen')
-      }
+      //if (player.body.x == 100) {
+      //game.state.start('endscreen')
+      //}
 
 
 
