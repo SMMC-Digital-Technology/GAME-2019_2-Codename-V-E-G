@@ -14,7 +14,7 @@ var loadState = {
       //game.load.image('help', 'assets/help.png');
       game.load.image('menubutton', 'assets/button.png');
       //game.load,image('backgroundmenu', 'assets/background2.png')
-      game.load.spritesheet('reginald', 'assets/REGINALD BOI.png', 64, 64);
+      game.load.spritesheet('reginald', 'assets/REGINALD BOI.png', 42, 53);
       game.load.image('ground', 'assets/platform.png');
       game.load.spritesheet('meatloaf1', 'assets/OH MY.png', 64, 64);
       game.load.spritesheet('meatloaf2', 'assets/OH MY.png', 64, 64);
