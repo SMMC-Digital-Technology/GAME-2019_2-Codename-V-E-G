@@ -8,12 +8,12 @@
 var levelState = {
 
   render: function() {
-     //game.debug.body(player);
   },
 
    create: function() {
 
 //this is the game world
+
       game.physics.startSystem(Phaser.Physics.ARCADE);
       game.world.setBounds(0,0,4000,1000);
       background  = game.add.sprite(0, 0, 'background');
@@ -22,6 +22,9 @@ var levelState = {
       platforms = game.add.group();
       platforms.enableBody = true;
       platforms.immovable = true;
+
+      desk = game.add.group();
+      desk.enableBody = true;
 
       var ground = platforms.create(0, (6300 - 500) / 6300 * game.world.height, 'ground');
         ground.body.immovable = true;
@@ -39,7 +42,9 @@ var levelState = {
         end2.scale.setTo(1, 1000);
         end2.alpha = 0;
 
-      var desks = platforms.create(3220, game.world.height - 150, 'desks');
+//part 1
+
+      desks = platforms.create(3220, game.world.height - 150, 'desks');
         desks.body.immovable = true;
       desks = platforms.create(3120, game.world.height - 150, 'desks');
         desks.body.immovable = true;
@@ -160,11 +165,9 @@ var levelState = {
       desks = platforms.create(400, game.world.height - 680, 'desks');
         desks.body.immovable = true;
 
+//part 2
+
       desks = platforms.create(100, game.world.height - 150, 'desks');
-        desks.body.immovable = true;
-      desks = platforms.create(100, game.world.height - 203, 'desks');
-        desks.body.immovable = true;
-      desks = platforms.create(100, game.world.height - 256, 'desks');
         desks.body.immovable = true;
       desks = platforms.create(100, game.world.height - 309, 'desks');
         desks.body.immovable = true;
@@ -183,24 +186,26 @@ var levelState = {
       desks = platforms.create(100, game.world.height - 680, 'desks');
         desks.body.immovable = true;
 
-      desks = platforms.create(200, game.world.height - 623, 'desks');
+//part 3
+
+      desks = desk.create(200, game.world.height - 468, 'desks');
         desks.body.immovable = true;
-      desks = platforms.create(200, game.world.height - 468, 'desks');
+      desks = desk.create(300, game.world.height - 256, 'desks');
         desks.body.immovable = true;
-      desks = platforms.create(200, game.world.height - 309, 'desks');
+      desks = desk.create(300, game.world.height - 680, 'desks');
         desks.body.immovable = true;
-      desks = platforms.create(200, game.world.height - 150, 'desks');
+      desks = desk.create(200, game.world.height - 150, 'desks');
         desks.body.immovable = true;
-      desks = platforms.create(300, game.world.height - 680, 'desks');
+      desks = desk.create(300, game.world.height - 150, 'desks');
         desks.body.immovable = true;
-      desks = platforms.create(300, game.world.height - 521, 'desks');
+      desks = desk.create(1, game.world.height - 150, 'desks');
         desks.body.immovable = true;
-      desks = platforms.create(300, game.world.height - 362, 'desks');
-        desks.body.immovable = true;
-      desks = platforms.create(0, game.world.height - 150, 'desks');
-        desks.body.immovable = true;
-      desks = platforms.create(600, game.world.height - 203, 'desks');
-        desks.body.immovable = true;
+    //  desks = platforms.create(300, game.world.height - 362, 'desks');
+      //  desks.body.immovable = true;
+    //  desks = platforms.create(0, game.world.height - 150, 'desks');
+      //  desks.body.immovable = true;
+    //  desks = platforms.create(600, game.world.height - 203, 'desks');
+      //  desks.body.immovable = true;
 
 
 
@@ -219,26 +224,39 @@ var levelState = {
         game.camera.follow(player);
 
 //this is meatloaf1
+
       meatloaf1 = game.add.sprite(2500, 750, 'meatloaf1');
         game.physics.arcade.enable(meatloaf1);
-        meatloaf1.body.gravity.y = 10000
+        meatloaf1.body.gravity.y = 10000;
         meatloaf1.collideWorldBounds = true;
         meatloaf1.animations.add('right', [0, 1, 2, 3 ], 10, true);
         meatloaf1.animations.add('left', [4, 5, 6, 7], 10, true);
+
 //this is meatloaf2
+
       meatloaf2 = game.add.sprite(1200, 750, 'meatloaf2');
         game.physics.arcade.enable(meatloaf2);
-        meatloaf2.body.gravity.y = 10000
+        meatloaf2.body.gravity.y = 10000;
         meatloaf2.collideWorldBounds = true;
         meatloaf2.animations.add('right', [0, 1, 2, 3 ], 10, true);
         meatloaf2.animations.add('left', [4, 5, 6, 7], 10, true);
+
 //this is meatloaf 3
+
       meatloaf3 = game.add.sprite(600, 400, 'meatloaf3');
         game.physics.arcade.enable(meatloaf3);
-        meatloaf3.body.gravity.y = 20000
+        meatloaf3.body.gravity.y = 20000;
         meatloaf3.collideWorldBounds = true;
         meatloaf3.animations.add('right', [0, 1, 2, 3 ], 10, true);
         meatloaf3.animations.add('left', [4, 5, 6, 7], 10, true);
+
+//this is the cafeteria lady
+
+      lady = game.add.sprite(250, 750, 'lady');
+        game.physics.arcade.enable(lady);
+        lady.body.gravity.y = 1000;
+        lady.collideWorldBounds = true;
+        lady.animations.add('ground', [1, 5, 3, 2, 1], 10, true)
 
 
 
@@ -250,18 +268,27 @@ var levelState = {
 
 
       var hitPlatform = game.physics.arcade.collide(player, platforms);
-      var hitPLatformMeatloaf1 = game.physics.arcade.collide(meatloaf1, platforms)
-      var hitPlatformMeatloaf2 = game.physics.arcade.collide(meatloaf2, platforms)
-      var hitPlatformMeatloaf3 = game.physics.arcade.collide(meatloaf3, platforms)
-      var meatloafHit1 = game.physics.arcade.collide(meatloaf1, player)
-      var meatloafHit2 = game.physics.arcade.collide(meatloaf2, player)
-      var meatloafHit3 = game.physics.arcade.collide(meatloaf3, player)
-      var hitEnd2 = game.physics.arcade.collide(player, end2)
-      var hitEnd1 = game.physics.arcade.collide(player, end1)
+      var ladyHitPlatform = game.physics.arcade.collide(platforms, lady)
+      var hitPLatformMeatloaf1 = game.physics.arcade.collide(meatloaf1, platforms);
+      var hitPlatformMeatloaf2 = game.physics.arcade.collide(meatloaf2, platforms);
+      var hitPlatformMeatloaf3 = game.physics.arcade.collide(meatloaf3, platforms);
+      var meatloafHit1 = game.physics.arcade.collide(meatloaf1, player);
+      var meatloafHit2 = game.physics.arcade.collide(meatloaf2, player);
+      var meatloafHit3 = game.physics.arcade.collide(meatloaf3, player);
+      var hitEnd2 = game.physics.arcade.collide(player, end2);
+      var hitEnd1 = game.physics.arcade.collide(player, end1);
+      var hitDesk = game.physics.arcade.collide(player, desk);
+
 
       if (player.x < 3200 && player.y > game.world.height - 150) {
-      player.body.x = 3800;
       player.body.y = game.world.height - 150;
+      player.x = 3500
+      meatloaf1.body.x = 2500
+      meatloaf1.body.y = 750
+      meatloaf2.body.x = 1200
+      meatloaf3.body.x = 600
+      meatloaf3.body.y = 400
+
       }
 
       if (player.body.x == 100 && player.body.y == 200) {
@@ -291,6 +318,10 @@ var levelState = {
 
       if (cursors.up.isDown && player.body.touching.down && hitPlatform){
         player.body.velocity.y = -700;
+      }
+
+      if (cursors.up.isDown && player.body.touching.down && hitDesk){
+        player.body.velocity.y = -700
       }
 
 //meatloaf1 movement
@@ -323,13 +354,14 @@ var levelState = {
       player.x = 3500
       meatloaf1.body.x = 2500
       meatloaf1.body.y = 750
-      meatloaf2.body.x = 1000
-      meatloaf3.body.x = 400
-      meatloaf3.body.y = 1000
+      meatloaf2.body.x = 1200
+      meatloaf3.body.x = 600
+      meatloaf3.body.y = 400
     }
 
 
 //meatloaf2 movement
+
     meatloaf2.body.velocity.y = 0;
     meatloaf2.body.velocity.x = 0;
 
@@ -356,14 +388,15 @@ var levelState = {
 
    if (meatloafHit2) {
      player.body.x = 3500
-     meatloaf2.body.x = 1000
+     meatloaf2.body.x = 1200
      meatloaf1.body.x = 2500
      meatloaf1.body.y = 750
-     meatloaf3.body.x = 400
-     meatloaf3.body.y = 1000
+     meatloaf3.body.x = 600
+     meatloaf3.body.y = 400
    }
 
 //meatloaf3 movement
+
    meatloaf3.body.velocity.y = 0;
    meatloaf3.body.velocity.x = 0;
 
@@ -390,14 +423,34 @@ var levelState = {
 
   if (meatloafHit3) {
     player.body.x = 3500
-    meatloaf3.body.x = 400
-    meatloaf3.body.y = 1000
-    meatloaf2.body.x = 1000
+    meatloaf3.body.x = 600
+    meatloaf3.body.y = 400
+    meatloaf2.body.x = 1200
     meatloaf1.body.x = 2500
     meatloaf1.body.x = 2500
     meatloaf1.body.y = 750
 
   }
+
+// Lady movement
+  lady.body.velocity.y = 0
+  lady.body.velocity.x = 0
+
+  if (player.x < lady.x) {
+    if (lady.x - player.x < 300 && lady.x > 300) {
+       lady.body.velocity.x = -130;
+     }
+
+   }
+  else {
+    if (player.x - lady .x < 300 && lady.x < game.world.width && ladyHitPlatform && lady.body.touching.gdown) {
+      lady.body.velocity.y = -700;
+     }
+
+   }
+
+
+
 
   }
    };
