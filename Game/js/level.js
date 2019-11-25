@@ -219,21 +219,21 @@ var levelState = {
         game.camera.follow(player);
 
 //this is meatloaf1
-      meatloaf1 = game.add.sprite(3000, game.world.height - 1500, 'meatloaf1');
+      meatloaf1 = game.add.sprite(2500, 750, 'meatloaf1');
         game.physics.arcade.enable(meatloaf1);
         meatloaf1.body.gravity.y = 10000
         meatloaf1.collideWorldBounds = true;
         meatloaf1.animations.add('right', [0, 1, 2, 3 ], 10, true);
         meatloaf1.animations.add('left', [4, 5, 6, 7], 10, true);
 //this is meatloaf2
-      meatloaf2 = game.add.sprite(1500, game.world.height - 1500, 'meatloaf2');
+      meatloaf2 = game.add.sprite(1500, 850, 'meatloaf2');
         game.physics.arcade.enable(meatloaf2);
         meatloaf2.body.gravity.y = 10000
         meatloaf2.collideWorldBounds = true;
         meatloaf2.animations.add('right', [0, 1, 2, 3 ], 10, true);
         meatloaf2.animations.add('left', [4, 5, 6, 7], 10, true);
 //this is meatloaf 3
-      meatloaf3 = game.add.sprite(600, game.world.height - 1500, 'meatloaf3');
+      meatloaf3 = game.add.sprite(600, 850, 'meatloaf3');
         game.physics.arcade.enable(meatloaf3);
         meatloaf3.body.gravity.y = 10000
         meatloaf3.collideWorldBounds = true;
@@ -253,9 +253,9 @@ var levelState = {
       var hitPLatformMeatloaf1 = game.physics.arcade.collide(meatloaf1, platforms)
       var hitPlatformMeatloaf2 = game.physics.arcade.collide(meatloaf2, platforms)
       var hitPlatformMeatloaf3 = game.physics.arcade.collide(meatloaf3, platforms)
-      //var meatloafHit1 = game.phsyics.arcade.collide(meatloaf1, player)
-      //var meatloafHit2 = game.phsyics.arcade.collide(meatloaf2, player)
-      //var meatloafHit3 = game.phsyics.arcade.collide(meatloaf3, player)
+      var meatloafHit1 = game.physics.arcade.collide(meatloaf1, player)
+      var meatloafHit2 = game.physics.arcade.collide(meatloaf2, player)
+      var meatloafHit3 = game.physics.arcade.collide(meatloaf3, player)
       var hitEnd2 = game.physics.arcade.collide(player, end2)
       var hitEnd1 = game.physics.arcade.collide(player, end1)
 
@@ -264,9 +264,9 @@ var levelState = {
       player.body.y = game.world.height - 150;
       }
 
-      //if (player.body.x == 100) {
-      //game.state.start('endscreen')
-      //}
+      if (player.body.x == 100 && player.body.y == 200) {
+      game.state.start('endscreen')
+      }
 
 
 
@@ -319,10 +319,11 @@ var levelState = {
       meatloaf1.body.velocity.x = 0;
     }
 
-    //if (meatloafHit1) {
-      //player.body.x = 3800
-      //meatloaf1.body.x = 3000
-    //}
+    if (meatloafHit1) {
+      player.x = 3500
+      meatloaf1.body.x = 2500
+      meatloaf1.body.y = 203
+    }
 
 
 //meatloaf2 movement
@@ -350,10 +351,10 @@ var levelState = {
     meatloaf2.body.velocity.x = 0;
    }
 
-   //if (meatloafHit2) {
-     //player.body.x = 3800
-     //meatloaf2.body.x = 3000
-   //}
+   if (meatloafHit2) {
+     player.body.x = 3500
+     meatloaf2.body.x = 3000
+   }
 
 //meatloaf3 movement
    meatloaf3.body.velocity.y = 0;
@@ -380,10 +381,10 @@ var levelState = {
     meatloaf3.body.velocity.x = 0;
   }
 
-  //if (meatloafHit3) {
-    //player.body.x = 3800
-    //meatloaf3.body.x = 3000
-  //}
+  if (meatloafHit3) {
+    player.body.x = 3500
+    meatloaf3.body.x = 3000
+  }
 
   }
    };
