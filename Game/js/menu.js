@@ -6,9 +6,11 @@ var menuState = {
   create: function() {
 
 
-     title = game.add.sprite(360,0, 'menutitle');
 
-     menuBackground = game.add.sprite(0, 0, 'backgroundmenu')
+
+     //menuBackground = game.add.sprite(0, 0, 'backgroundmenu')
+
+     title = game.add.sprite(450,100, 'menutitle');
 
      menubutton = game.add.button(game.world.centerX, game.world.centerY, 'menubutton', actionOnClick, this, 2, 1, 0);
      menubutton.anchor.setTo(0.5,0.5);
