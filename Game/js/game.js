@@ -8,12 +8,7 @@ game.state.add('gameover', gameoverState);
 //game.state.add('endscreen', endState);
 
 game.global = {
-<<<<<<< HEAD
-  score = 0
-=======
 
->>>>>>> e4f4a2774a8ed19b6e29782e9b3fa05ace35acc1
-};
 
 
    // set variables that travel between the states here

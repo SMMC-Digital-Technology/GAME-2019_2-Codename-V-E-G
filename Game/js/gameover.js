@@ -5,17 +5,11 @@ var gameoverState = {
    create: function() {
       // create the screen
 
-      //add button
-      //gameoverbutton = game.add.button(game.world.centerX, game.world.centerY, 'gameoverbutton');
-      //gameoverbutton.anchor.setTo(0.5,0.5);
-      //gameoverbutton.onInputUp.add(this.buttonclick);
+      gameoverbutton = game.add.button(window.innerWidth / 2.3, game.world.centerY, 'menubutton', actionOnClick, this, 2, 1, 0);
+      function actionOnClick(){
+        game.state.start('menu');
 
-   },
+   }
 
-       // create the scene
-         //}
-   //},
-    buttonClick: function() {
-     game.state.start('menu');
    }
 };
